@@ -63,6 +63,13 @@ h1, h2, h3 { letter-spacing: -.055em; }
 }
 .brand { display: inline-flex; align-items: center; gap: 14px; white-space: nowrap; font-size: 26px; font-weight: 720; letter-spacing: -.07em; }
 .brand img { object-fit: contain; flex: none; }
+/* Let all on-page logos contrast with their background: dark on light, white on dark. */
+.brand img,
+.app-sidebar-brand img,
+.footer-mark img {
+  filter: brightness(0) invert(1);
+  mix-blend-mode: difference;
+}
 .nav-links { display: flex; align-items: center; justify-content: flex-end; gap: clamp(19px, 2.2vw, 39px); flex: 1; margin-right: clamp(8px, 2vw, 30px); }
 .nav-links a { font-size: 13px; font-weight: 530; }
 .nav-links a:hover { text-decoration: underline; text-underline-offset: 5px; }
