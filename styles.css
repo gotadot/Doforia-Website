@@ -343,3 +343,69 @@ h1, h2, h3 { letter-spacing: -.055em; }
 .platform-inner h2{font-size:clamp(42px,10vw,59px)}
 .platform-list span{font-size:12px;padding:10px 13px}
 }
+
+/* Action / Task / Habit / Tag relationship */
+.relation-section{padding-block:100px 110px;border-top:1px solid var(--line)}
+.relation-heading{margin-bottom:38px}
+.relation-heading-grid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(230px,.65fr);align-items:end;gap:40px}
+.relation-heading-grid h2{font-size:clamp(40px,4.3vw,70px);line-height:1.08;letter-spacing:-.065em;margin:16px 0 0;font-weight:740}
+.relation-heading-grid>p{margin:0 0 5px;color:#595959;font-size:14px;line-height:1.8}
+.relation-heading-grid strong{color:#111}
+.relation-layout{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(270px,1fr);gap:16px;align-items:stretch}
+.relation-action-panel{border:1px solid #ddd;border-radius:12px;padding:29px 30px 30px;background:#fafafa}
+.relation-core{max-width:340px;min-height:138px;margin:0 auto;border-radius:9px;background:#111;color:#fff;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:20px}
+.relation-overline{font-size:10px;letter-spacing:.14em;font-weight:700;color:#848484}
+.relation-core .relation-overline{color:#b9b9b9}
+.relation-core strong{font-size:34px;letter-spacing:-.06em;line-height:1.2;margin:8px 0 3px;font-weight:740}
+.relation-core>span:last-child{color:#c7c7c7;font-size:11px}
+.relation-branch{position:relative;height:39px;width:100%}
+.relation-branch::before{content:"";position:absolute;left:50%;top:0;height:20px;border-left:1px solid #999}
+.relation-branch::after{content:"";position:absolute;left:25%;right:25%;bottom:0;border-top:1px solid #999}
+.relation-types{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.relation-type{position:relative;display:flex;flex-direction:column;min-height:230px;padding:23px 23px 21px;border:1px solid #dedede;border-radius:8px;background:#fff}
+.relation-type::before{content:"";position:absolute;left:50%;bottom:100%;height:17px;border-left:1px solid #999}
+.relation-type h3{font-size:28px;line-height:1.1;margin:12px 0 10px;font-weight:720}
+.relation-type p{font-size:12px;line-height:1.75;color:#585858;margin:0 0 21px}
+.relation-example{margin-top:auto;border-top:1px solid #ebebeb;padding-top:13px;color:#666;font-size:11px}
+.relation-tag-panel{background:#fff;border:1px solid #111;border-radius:12px;padding:28px 28px 25px;display:flex;flex-direction:column}
+.relation-tag-panel h3{margin:12px 0 10px;font-size:36px;line-height:1.1;font-weight:730}
+.relation-tag-panel>p{margin:0 0 19px;color:#555;font-size:13px;line-height:1.7}
+.relation-tag-detail{border-top:1px solid #e7e7e7;padding:16px 0 0;margin-bottom:13px}
+.relation-tag-detail strong{font-size:13px}
+.relation-tag-detail p{font-size:12px;color:#666;line-height:1.7;margin:5px 0 0}
+.relation-tag-chips{margin-top:auto;display:flex;flex-wrap:wrap;gap:7px;padding-top:17px}
+.relation-tag-chips span{display:inline-block;font-size:10px;border:1px solid #d6d6d6;background:#f9f9f9;padding:7px 10px;border-radius:999px}
+.relation-caption{font-size:13px;line-height:1.8;margin:23px 0 0;color:#414141}
+.relation-caption strong{color:#111}
+.relation-caption em{font-style:normal;font-weight:700}
+.relation-footnote{font-size:11px;line-height:1.7;color:#888;margin:9px 0 0}
+@media(max-width:1050px){
+.relation-layout{grid-template-columns:minmax(0,1.4fr) minmax(240px,1fr)}
+.relation-action-panel{padding:22px}
+.relation-type{padding:20px 17px}
+}
+@media(max-width:840px){
+.relation-layout{grid-template-columns:1fr}
+.relation-tag-panel{min-height:0}
+.relation-heading-grid{grid-template-columns:1fr;gap:18px}
+.relation-heading-grid>p{max-width:680px}
+}
+@media(max-width:650px){
+.relation-section{padding-block:65px 75px}
+.relation-heading-grid h2{font-size:clamp(37px,9vw,55px)}
+.relation-action-panel{padding:19px}
+.relation-types{gap:10px}
+.relation-type{min-height:245px;padding:18px 14px}
+.relation-type h3{font-size:24px}
+.relation-type p{font-size:12px}
+.relation-tag-panel{padding:23px}
+}
+@media(max-width:440px){
+.relation-types{grid-template-columns:1fr}
+.relation-branch{height:24px}
+.relation-branch::before{height:24px}
+.relation-branch::after{display:none}
+.relation-type::before{display:none}
+.relation-type{min-height:0}
+.relation-type + .relation-type::before{display:none}
+}
