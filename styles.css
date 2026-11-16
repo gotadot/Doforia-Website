@@ -371,3 +371,73 @@ h1, h2, h3 { letter-spacing: -.055em; }
 .platform-inner h2{font-size:clamp(42px,10vw,59px)}
 .platform-list span{font-size:12px;padding:10px 13px}
 }
+
+/* Automatic OS dark appearance. Preserve the light desktop demo as a preview. */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --ink: #f4f4f4;
+    --text: #ebebeb;
+    --muted: #b4b4b4;
+    --line: #363636;
+    --soft: #1c1c1c;
+    --panel: #202020;
+    --shadow: 0 18px 42px rgba(0, 0, 0, .35), 0 2px 8px rgba(0, 0, 0, .17);
+  }
+  body { background: #111; color: var(--ink); }
+  :where(a, button, input):focus-visible { outline-color: #eee; }
+  .skip-link { background: #f4f4f4; color: #111; }
+  .button-dark { background: #f4f4f4; color: #111; border-color: #f4f4f4; }
+  .button-dark:hover { background: #d9d9d9; }
+  .button-light { background: #202020; color: #f4f4f4; border-color: #777; }
+  .button-light:hover { background: #333; }
+  .eyebrow, .hero-description, .features-inner p,
+  .download-copy > p:last-child, .platform-inner > div:first-child > p:last-child {
+    color: #c2c2c2;
+  }
+  .hero-note, .preview-caption, .system-status, .system-disclaimer,
+  .release-note, .pricing-footnote, .plan-top span, .annual,
+  .price small, .plan > p, .pricing-intro > p:last-child {
+    color: #ababab;
+  }
+  .nav-links { border-top-color: var(--line); }
+  .features-inner .tag-highlight {
+    background: #050505;
+    color: #fff;
+    border: 1px solid #777;
+  }
+  /* The demo intentionally stays light so its UI remains legible. */
+  .desktop-window {
+    color: #111;
+    background: #fff;
+    border-color: #4a4a4a;
+  }
+  .system-card p { color: #c1c1c1; }
+  .system-card p strong, .system-heading-grid p strong { color: #f4f4f4; }
+  .system-number { color: #a5a5a5; }
+  .platform-section, .download-section { background: #1b1b1b; border-color: var(--line); }
+  .platform-list span { background: #282828; color: #ddd; border-color: #484848; }
+  .platform-list .platform-current {
+    background: #f4f4f4;
+    color: #111;
+    border-color: #f4f4f4;
+    box-shadow: none;
+  }
+  .platform-list .platform-planned {
+    background: #252525;
+    color: #b4b4b4;
+    border-color: #414141;
+  }
+  .release-status, .release-note { color: #bcbcbc; }
+  .status-indicator { background: #aaa; }
+  .plan { background: #1c1c1c; border-color: #424242; }
+  .plan-plus { border-color: #f0f0f0; }
+  .plan-top span, .plan > p, .annual, .price small { color: #b3b3b3; }
+  .price, .plan li { color: #f0f0f0; }
+  .plan ul { border-top-color: #444; }
+  .plan-status { border-color: #666; color: #c1c1c1; }
+  .plan-plus .plan-status { background: #f0f0f0; border-color: #f0f0f0; color: #111; }
+  .site-footer { color: #b4b4b4; }
+  .footer-mark { color: #f4f4f4; }
+  .footer-mark span { color: #b4b4b4; }
+}
